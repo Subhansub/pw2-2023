@@ -40,39 +40,19 @@
                     </tr>
                 </tfoot>
                 <tbody>
+                    @foreach ($reviews as $review)
                     <tr>
-                        <td>1</td>
-                        <td>WHRAT of MAN</td>
-                        <td>Jumharis</td>
-                        <td>9.0</td>
-                        <td>Seru nontonya</td>
+                        <td>{{ $review['no'] }}</td>
+                        <td>{{ $review['movie'] }}</td>
+                        <td>{{ $review['user'] }}</td>
+                        <td>{{ $review['rating'] }}</td>
+                        <td>{{ $review['comment'] }}</td>
                         <td>
                             <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete?')"> Delete</a>
+                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
                         </td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Pengabdi setan</td>
-                        <td>Furkan</td>
-                        <td>8.5</td>
-                        <td>Seram Filmnya</td>
-                        <td>
-                            <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete?')"> Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Hangout</td>
-                        <td>ahmadin</td>
-                        <td>8.8</td>
-                        <td>Komedinya dapat horornyapun dapat</td>
-                        <td>
-                            <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete?')"> Delete</a>
-                        </td>
-                    </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

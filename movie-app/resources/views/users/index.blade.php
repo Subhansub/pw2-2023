@@ -44,10 +44,10 @@
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>jumharis</td>
-                        <td>jumhari</td>
-                        <td>hore</td>
-                        <td>jum34@gmail.com</td>
+                        <td>Jumharis</td>
+                        <td>Jum</td>
+                        <td>kombi</td>
+                        <td>jumharis@gmail.com</td>
                         <td>Administrator</td>
                         <td>
                             <a href="" class="btn btn-sm btn-warning"> Edit</a>
@@ -57,7 +57,7 @@
                     <tr>
                         <td>2</td>
                         <td>Dudin</td>
-                        <td>dud12</td>
+                        <td>Din</td>
                         <td>ngomi</td>
                         <td>dudin45@gmail.com</td>
                         <td>User</td>
@@ -68,10 +68,10 @@
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td>ahmadin</td>
-                        <td>ahmad</td>
-                        <td>ticauq</td>
-                        <td>ahmad99@gmail.com</td>
+                        <td>Ahmadin</td>
+                        <td>Adi</td>
+                        <td>ticauku</td>
+                        <td>ahmadin45@gmail.com</td>
                         <td>User</td>
                         <td>
                             <a href="" class="btn btn-sm btn-warning"> Edit</a>
@@ -84,6 +84,18 @@
                         <td>Ka</td>
                         <td>nahu</td>
                         <td>furkan32@gmail.com</td>
+                        <td>User</td>
+                        <td>
+                            <a href="" class="btn btn-sm btn-warning"> Edit</a>
+                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete?')"> Delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Fathullah</td>
+                        <td>Hula</td>
+                        <td>sodi</td>
+                        <td>fathullah101@gmail.com</td>
                         <td>User</td>
                         <td>
                             <a href="" class="btn btn-sm btn-warning"> Edit</a>
