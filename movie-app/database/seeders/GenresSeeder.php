@@ -27,5 +27,15 @@ class GenresSeeder extends Seeder
             'nama' => 'Drama',
             'deskripsi' => 'Emotional and serious themes',
         ]);
+
+        Genres::create([
+            'nama' => 'Anime',
+            'deskripsi' => 'Film tentang animasi',
+        ]);
+
+        Genres::create([
+            'nama' => 'Horor',
+            'deskripsi' => 'Film yang menyeramkan',
+        ]);
     }
 }
