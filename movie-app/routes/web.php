@@ -21,6 +21,9 @@ Route::get('/', function () {
 });
 
 route::get('//movies', [MovieController::class, 'index']);
+route::get('/movies/create', [MovieController::class, 'create']);
+route::post('/movies', [MovieController::class, 'store']);  
+route::delete('/movies/{movie}', [MovieController::class, 'destroy']);
 
 route::get('//genres', [GenresController::class, 'genres']);
 
