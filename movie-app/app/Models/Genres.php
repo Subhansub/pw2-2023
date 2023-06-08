@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Genres extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['nama', 'deskripsi'];
+
     
     public function getAllReview()
     {

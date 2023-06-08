@@ -8,10 +8,15 @@
             <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
             <li class="breadcrumb-item active">Reviews</li>
         </ol>
-        <a href="#">
+        <a href="/reviews/create">
             <button class="btn btn-success" type="submit">Create Data</button>
         </a>
     </div>
+    @if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+    @endif
     <div class="card mb-4">
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
@@ -49,7 +54,12 @@
                         <td>{{ $review->comment }}</td>
                         <td>
                             <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                            <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
+                            <form action="/reviews/{{ $review->id }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-sm btn-danger" 
+                                onclick="return confirm('Apakah Anda yakin ingin menghapus?')">Delete</button>
+                            </form>
                         </td>
                     </tr>
                     @endforeach

@@ -43,7 +43,7 @@ class MovieController extends Controller
 
         Movie::create($validatedData);
 
-        return redirect('/movies')->with('success', 'Movie added successfully!');
+        return redirect('/movies')->with('success', 'Data berhasil ditambahkan');
     }
 
     /**
@@ -77,6 +77,6 @@ class MovieController extends Controller
     {
         $movie->delete();
 
-        return redirect('/movies')->with('success', 'Movie deleted successfully!');
+        return redirect('/movies')->with('success', 'Data berhasil dihapus');
     }
 }

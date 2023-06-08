@@ -26,8 +26,14 @@ route::post('/movies', [MovieController::class, 'store']);
 route::delete('/movies/{movie}', [MovieController::class, 'destroy']);
 
 route::get('//genres', [GenresController::class, 'genres']);
+route::get('/genres/create', [GenresController::class, 'create']);
+route::post('/genres', [GenresController::class, 'store']);  
+route::delete('/genres/{genres}', [GenresController::class, 'destroy']);
 
 route::get('//reviews', [ReviewController::class, 'reviews']);
+route::get('/reviews/create', [ReviewController::class, 'create']);
+route::post('/reviews', [ReviewController::class, 'store']);  
+route::delete('/reviews/{reviews}', [ReviewController::class, 'destroy']);
 
 Route::get('/users', function () {
     return view('users/index');
