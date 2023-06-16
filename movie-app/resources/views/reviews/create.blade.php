@@ -38,8 +38,12 @@
                     <input type="text" id="rating" name="rating">
                 </div>
                 <div>
-                    <label for="comment">Rating:</label>
+                    <label for="comment">comment:</label>
                     <input type="text" id="comment" name="comment">
+                </div>
+                <div>
+                    <label for="tanggal">tanggal:</label>
+                    <input type="text" id="tanggal" name="tanggal">
                 </div>
                 <button type="submit">Add</button>
             </form>

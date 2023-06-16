@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Genres;
 use App\Models\Movie;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class MovieController extends Controller
 {
@@ -41,6 +42,17 @@ class MovieController extends Controller
             'rating' => 'required|numeric',
         ]);
 
+        if($request->hasFile('poster')) {
+            //set image name
+            $extension = $request->file('poster')->getClientOriginalExtension();
+            $imageName = time() . '.' . $extension;
+
+            //store to storange
+            $request->file('poster')->storeAs('assets/img', $imageName, 'public');
+            $validatedData['poster'] = $imageName;
+
+        }
+
         Movie::create($validatedData);
 
         return redirect('/movies')->with('success', 'Data berhasil ditambahkan');
@@ -59,7 +71,10 @@ class MovieController extends Controller
      */
     public function edit(Movie $movie)
     {
-        //
+        $genres = Genres::all();
+        
+        return view('movies.edit', compact('movie', 'genres'));
+        
     }
 
     /**
@@ -67,7 +82,32 @@ class MovieController extends Controller
      */
     public function update(Request $request, Movie $movie)
     {
-        //
+        $validatedData = $request->validate([
+            'judul' => 'required',
+            'poster' => 'required',
+            'genre_id' => 'required',
+            'negara' => 'required',
+            'tahun' => 'required|integer',
+            'rating' => 'required|numeric',
+        ]);
+
+        if($request->hasFile('poster')) {
+            //Delete image name
+            Storage::disk('public')->delete('asset/img' . $movie->poster);
+            
+            //set image name
+            $extension = $request->file('poster')->getClientOriginalExtension();
+            $imageName = time() . '.' . $extension;
+
+            //store to storange
+            $request->file('poster')->storeAs('assets/img', $imageName, 'public');
+            $validatedData['poster'] = $imageName;
+
+        }
+    
+        $movie->update($validatedData);
+    
+        return redirect('/movies')->with('success', 'Data berhasil diupdate');
     }
 
     /**

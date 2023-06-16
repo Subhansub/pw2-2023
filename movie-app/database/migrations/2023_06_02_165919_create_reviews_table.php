@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('user');
             $table->float('rating');
             $table->string('comment');
+            $table->float('tanggal');
             $table->timestamps();
         });
     }
