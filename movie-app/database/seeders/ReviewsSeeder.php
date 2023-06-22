@@ -18,7 +18,7 @@ class ReviewsSeeder extends Seeder
             'user' => 'Jumharis',
             'rating' => 8.5,
             'comment' => 'Ngak pernah bosan nontonya',
-            'tanggal' => 29-05-2023,
+            'tanggal' => 13-12-2023,
         ]);
 
         Review::create([
@@ -26,7 +26,7 @@ class ReviewsSeeder extends Seeder
             'user' => 'Furkan',
             'rating' => 7.2,
             'comment' => 'Filmn cukup seram',
-            'tanggal' => 9-06-2023,
+            'tanggal' => 16-07-2023,
         ]);
 
         Review::create([
@@ -34,7 +34,7 @@ class ReviewsSeeder extends Seeder
             'user' => 'Fathullah',
             'rating' => 8.5,
             'comment' => 'Komedinya dapat horornyapun dapat',
-            'tanggal' => 11-06-2023,
+            'tanggal' => 21-1-2023,
         ]);
 
         Review::create([
@@ -42,7 +42,7 @@ class ReviewsSeeder extends Seeder
             'user' => 'Dudin',
             'rating' => 9.0,
             'comment' => 'filmnya bagus buat nonton besama keluarga',
-            'tanggal' => 30-05-2023,
+            'tanggal' => 30-06-2023,
         ]);
 
         Review::create([
@@ -50,7 +50,7 @@ class ReviewsSeeder extends Seeder
             'user' => 'ahmadin',
             'rating' => 6.0,
             'comment' => 'seru nontonya',
-            'tanggal' => 8-06-2023,
+            'tanggal' => 18-07-2023,
         ]);
     }
 }
